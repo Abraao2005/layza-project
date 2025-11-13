@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4 Meses com Você ❤️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ff8fa3, #ffc0cb);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 20px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px auto;
+      max-width: 1000px;
+    }
+
+    .galeria img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255,255,255,0.6);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .mensagem {
+      margin-top: 50px;
+      font-size: 1.3em;
+      background: rgba(255,255,255,0.2);
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6em;
+      animation: fadeIn 3s ease;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 1em;
+      color: #fff;
+      opacity: 0.8;
+    }
+
+    .heart {
+      color: #ff4d6d;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>❤️ 4 Meses com Você, Láyza ❤️</h1>
+  <p>Quatro meses de risadas, carinho, amor e momentos inesquecíveis. Cada foto é uma lembrança do quanto você é especial pra mim.</p>
+
+  <div class="galeria" id="galeria"></div>
+
+  <div class="mensagem">
+    <p>
+      Láyza, esses 4 meses ao seu lado têm sido os mais incríveis da minha vida.  
+      A cada dia que passa, eu percebo o quanto você me faz bem, o quanto me inspira e o quanto eu tenho sorte de te ter comigo.  
+      Que venham muitos outros meses, anos e momentos lindos como esses.  
+      Você é o meu amor, a minha paz e o meu lar. 💖  
+    </p>
+  </div>
+
+  <footer>
+    Feito com muito amor por mim, pra você, <span class="heart">♥</span>
+  </footer>
+
+  <script>
+    const fotos = [
+      "fotos/foto1.jpg",
+      "fotos/foto2.jpg",
+      "fotos/foto3.jpg",
+      "fotos/foto4.jpg",
+      "fotos/foto5.jpg"
+    ];
+
+    const galeria = document.getElementById("galeria");
+
+    fotos.forEach((src, index) => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.style.animationDelay = (index * 0.3) + "s";
+      galeria.appendChild(img);
+    });
+  </script>
+
+</body>
+</html>
